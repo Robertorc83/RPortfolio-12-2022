@@ -1,9 +1,14 @@
 import ProjectCard from "./projectCard"
 
-export default function Projects(){
+type Props = {
+    selectedId: string,
+    setSelectedId: React.Dispatch<any>
+}
+
+export default function Projects({selectedId, setSelectedId}: Props){
     return (
-        <div className="pb-20">
-            <ProjectCard title="Psicodidacta" />
+        <div className="pb-20 ml-16">
+            <ProjectCard title="Psicodidacta" description="adsadsads" image="images/" selectedId={selectedId} setSelectedId={setSelectedId}/>
         </div>
     )
 }
