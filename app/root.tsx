@@ -32,6 +32,7 @@ export default function App() {
   return (
     <html lang="en" className="h-full">
       <head>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
         <Meta />
         <Links />
       </head>
