@@ -6,7 +6,7 @@ export default function Header() {
     <header className="w-full">
         <div className="grid grid-cols-2 mt-5">
             <motion.div 
-                className="ml-10 text-lg text-white font-monoton cursor-none"
+                className="ml-10 text-sm md:text-lg text-white font-monoton cursor-none"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 animate={{ x: 60 }}
