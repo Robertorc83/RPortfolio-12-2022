@@ -2,29 +2,30 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import tabs from "~/data/about";
 import type { Tab } from "~/data/about"
-
+import { useIsMedium } from "~/hooks/useMediaQuery";
 
 export default function About(){
     const [selectedTab, setSelectedTab] = useState<Tab>(tabs[0])
+    const isMedium = useIsMedium()
     return (
         <div className="mt-24 pb-20">
             <div className="flex justify-end">
                 <motion.h2 
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    animate={{ x: -100}}
+                    animate={isMedium ?{ x: -100} : { x: -40}}
                     transition={{ ease: "easeOut", duration: 2 }}
                     className="animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 bg-clip-text text-transparent text-[60px] font-bold font-bal text-center mt-10">
                     About Me
                 </motion.h2>
             </div>
             <motion.div 
-                className=" w-3/4 ml-36 mt-24"
+                className="w-full px-10 lg:px-0 lg:w-3/4 lg:ml-36 mt-24 flex flex-col justify-center lg:block"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ ease: "easeOut", duration: 2 }}
             >
-                <nav>
+                <div>
                     <ul className="flex flex-row w-full animate-text bg-gradient-to-r from-slate-600 via-stone-700 to-slate-800 rounded-t-lg">
                     {tabs.map((item) => (
                         <li
@@ -39,7 +40,7 @@ export default function About(){
                         </li>
                     ))}
                     </ul>
-                </nav>
+                </div>
                 <div>
                     <AnimatePresence mode="wait">
                         <motion.div

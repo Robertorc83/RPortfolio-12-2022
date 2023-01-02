@@ -12,20 +12,33 @@ type Props = {
 
 export default function ProjectCard({id, title, description, selectedId, setSelectedId, image, color}:Props){
     return(
-        <div className="overflow-hidden">
+        <div className="overflow-hidden flex justify-center lg:block">
             <motion.div 
-                className="max-w-sm ml-16 mt-36 min-h-max"
+                className="w-96 lg:w-auto lg:max-w-sm lg:ml-16 mt-36 min-h-max"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ ease: "easeOut", duration: 1.5 }}
             >
                 <div className={`animate-text rounded-t-2xl bg-gradient-to-r ${color} flex justify-center py-10`}>
-                    <img src={image} alt="" className="h-24" />
+                    <img 
+                        src={image} 
+                        alt="" 
+                        className="h-24" 
+                    />
                 </div>
-                <motion.div layoutId={id} onClick={() => setSelectedId(id)} className="bg-white cursor-pointer rounded-b-2xl">
+                <motion.div 
+                    layoutId={id} 
+                    onClick={() => setSelectedId(id)} 
+                    className="bg-white cursor-pointer rounded-b-2xl"
+                >
                     <motion.h4 className={`p-5 font-monoton animate-text bg-gradient-to-r ${color} bg-clip-text text-lg text-transparent`}>{title}</motion.h4>
-                    <motion.img src="" alt="" />
-                    <motion.p></motion.p>
+                    <motion.img 
+                        src="" 
+                        alt="" 
+                    />
+                    <motion.p>
+
+                    </motion.p>
                 </motion.div>
             </motion.div>
             <AnimatePresence>

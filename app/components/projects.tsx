@@ -9,7 +9,7 @@ type Props = {
 
 export default function Projects({selectedId, setSelectedId}: Props){
     return (
-        <div className="mt-12">
+        <div className="mt-12 overflow-x-hidden w-screen">
             <div className="flex justify-start">
                 <motion.h2 
                     whileHover={{ scale: 1.1 }}
@@ -20,7 +20,7 @@ export default function Projects({selectedId, setSelectedId}: Props){
                     Projects
                 </motion.h2>
             </div>
-            <div className="pb-20 ml-20 grid grid-cols-2">
+            <div className="pb-20 lg:ml-20 lg:grid flex flex-col justify-center md:grid-cols-2">
                 {projects.map(elem => { 
                     return(
                         <ProjectCard key={elem.id} id={elem.id} title={elem.title} description={elem.description} color={elem.background} image={elem.image} selectedId={selectedId} setSelectedId={setSelectedId}/>

@@ -50,11 +50,13 @@ export default function App() {
         <Meta />
         <Links />
         <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
-      <body className="h-full cursor-none">
+      <body className="h-full w-screen cursor-none overflow-x-hidden relative">
         <Outlet />
          <div
-          className=" hiiden lg:block animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
+          className=" hidden lg:block animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
           style={{
               transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
           }}>
