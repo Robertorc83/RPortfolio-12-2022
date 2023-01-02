@@ -47,14 +47,14 @@ export default function App() {
   return (
     <html lang="en" className="h-full">
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
         <Meta />
         <Links />
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
       </head>
       <body className="h-full cursor-none">
         <Outlet />
          <div
-          className="animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
+          className=" hiiden lg:block animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
           style={{
               transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
           }}>

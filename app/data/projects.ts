@@ -1,4 +1,12 @@
-const projects = [
+interface Project {
+    id: string;
+    title: string;
+    image: string;
+    background: string;
+    description: string;
+}
+
+const projects : Project[] = [
     {
         id:"1",
         title: "Psicodidacta",

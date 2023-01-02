@@ -19,7 +19,7 @@ export default function ProjectCard({id, title, description, selectedId, setSele
                 whileTap={{ scale: 0.9 }}
                 transition={{ ease: "easeOut", duration: 1.5 }}
             >
-                <div className={`rounded-t-2xl bg-gradient-to-r ${color} flex justify-center py-10`}>
+                <div className={`animate-text rounded-t-2xl bg-gradient-to-r ${color} flex justify-center py-10`}>
                     <img src={image} alt="" className="h-24" />
                 </div>
                 <motion.div layoutId={id} onClick={() => setSelectedId(id)} className="bg-white cursor-pointer rounded-b-2xl">

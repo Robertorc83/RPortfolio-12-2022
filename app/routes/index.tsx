@@ -4,6 +4,7 @@ import Header from "@components/header";
 import Projects from "@components/projects";
 import Main from "@components/main";
 import Description from "~/components/description";
+import Contact from "~/components/contact";
 
 export default function Index() {
   const [selectedId, setSelectedId] = useState<any>(null)
@@ -16,6 +17,7 @@ export default function Index() {
       </div>
         <Projects selectedId={selectedId} setSelectedId={setSelectedId}/>
         <About/>
+        <Contact />
     </div>
   );
 }
