@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { useIsMedium } from '~/hooks/useMediaQuery';
 import { Divide as Hamburger } from 'hamburger-react';
+import { useOutletContext } from "@remix-run/react";
 
 export default function Header() {
+    const toggleOpen = useOutletContext<any>();
     const isMedium = useIsMedium();
   return (
     <header className="w-full">
@@ -18,13 +20,12 @@ export default function Header() {
                 <h3 className="tracking-wide">FULL-STACK DEVELOPER</h3>
             </motion.div>
             <motion.div 
-                className="ml-10 text-lg h-8 md:h-10 flex justify-end pr-16"
-                whileHover={{ scale: 1.1 }}
+                className="ml-10 text-lg h-8 md:h-10 flex justify-end pr-16 relative z-40"
                 whileTap={{ scale: 0.9 }}
                 animate={isMedium ? { x:-50 } : { x:-20}}
                 transition={{ ease: "easeOut", duration: 2 }}
             >
-                <Hamburger color="#131a29" easing="ease-in" rounded />
+                <Hamburger onToggle={toggleOpen[1]} color="#131a29" easing="ease-in" rounded />
             </motion.div >
         </div>
     </header>
