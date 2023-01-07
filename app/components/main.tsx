@@ -26,7 +26,7 @@ export default function Main(){
                   animate={{ x: 10 }}
                   transition={{ ease: "easeOut", duration: 1.8 }}
                 >
-                  <FontAwesomeIcon icon={faLinkedinIn} className="text-white font-monoton h-8 px-5 cursor-pointer"/>
+                  <a href="https://www.linkedin.com/in/robertoes/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} className="text-white font-monoton h-8 px-5 cursor-pointer"/></a>
                 </motion.p>
                 <motion.p
                   whileHover={{ scale: 1.2 }}
@@ -34,7 +34,7 @@ export default function Main(){
                   animate={{ x: 10 }}
                   transition={{ ease: "easeOut", duration: 1.8 }}
                 >
-                  <FontAwesomeIcon icon={faGithub} className="text-white font-monoton h-8 px-5 cursor-pointer"/>
+                  <a href="https://github.com/Robertorc83?tab=repositories" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="text-white font-monoton h-8 px-5 cursor-pointer"/></a>
                 </motion.p>
                 <motion.p
                   whileHover={{ scale: 1.2 }}
@@ -42,7 +42,7 @@ export default function Main(){
                   animate={{ x: 10 }}
                   transition={{ ease: "easeOut", duration: 1.8 }}
                 >
-                  <FontAwesomeIcon icon={faFileLines} className="text-white font-monoton h-8 px-5 cursor-pointer"/>
+                  <a href="https://drive.google.com/file/d/1ZCapCkvxm2O6o-SkKlmiY9sMEkrKEYTy/view?usp=sharing" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFileLines} className="text-white font-monoton h-8 px-5 cursor-pointer"/></a>
                 </motion.p>
               </div>
             </div> 

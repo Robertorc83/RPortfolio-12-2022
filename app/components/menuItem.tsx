@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link, useOutletContext } from "@remix-run/react";
+import type MenuItm from "../types/menuItem";
 
 const variants = {
   open: {
@@ -17,23 +19,18 @@ const variants = {
   }
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
-type Props ={
-    i:number,
-    key:number,
-};
-export const MenuItem = ({i, key}:Props) => {
-  const style = { border: `2px solid ${colors[i]}` };
+
+export const MenuItem = ({id, title, url}:MenuItm) => {
+  const toggleOpen = useOutletContext<any>();
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      key={key}
-      className="relative z-30"
+      key={id}
+      className={`relative z-30 ${  toggleOpen[0] === true ? "" : "pointer-events-none"}`}
     >
-      <div className="icon-placeholder" style={style} />
-      <div className="text-placeholder" style={style} />
+      <Link to={url} onClick={toggleOpen[1]} className="font-monoton text-2xl ml-10 text-white">{title}</Link>
     </motion.li>
   );
 };

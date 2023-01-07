@@ -13,6 +13,7 @@ import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
 import { useEffect, useState } from "react";
 import { useCycle } from "framer-motion";
+import Footer from "./components/footer";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -20,7 +21,7 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Remix Notes",
+  title: "Roberto's",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -56,16 +57,20 @@ export default function App() {
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
       <body className="h-full w-screen cursor-none overflow-x-hidden relative">
-        <Outlet context={[isOpen, toggleOpen]} />
-         <div
-          className=" hidden lg:block z-30 animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
-          style={{
-              transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
-          }}>
+        <div className=" bg-gradient-to-r from-gray-900 to-gray-600 min-h-screen bg-cover mt-0 pt-5 relative" >
+          <Outlet context={[isOpen, toggleOpen]} />
+          <div
+            className=" hidden lg:block z-30 animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
+            style={{
+                transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
+            }}
+          >
+          </div>
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+          <Footer />
         </div>
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
       </body>
     </html>
   );

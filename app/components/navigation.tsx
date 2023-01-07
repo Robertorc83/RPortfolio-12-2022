@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MenuItem } from "./menuItem";
+import items from "~/data/menuItems";
 
 const variants = {
   open: {
@@ -13,12 +14,13 @@ const variants = {
 export const Navigation = () => (
   <motion.ul 
      variants={variants}
-     className="p-10 absolute top-24 w-72"
+     className="absolute p-10 w-72 flex flex-col space-y-12"
   >
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
+    {items.map(i => (
+      // eslint-disable-next-line react/jsx-key
+      <MenuItem id={i.id} title={i.title} url={i.url}/>
     ))}
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
+
