@@ -1,11 +1,21 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Navigation } from "./navigation";
+import { useIsLarge } from "~/hooks/useMediaQuery";
 import { useOutletContext } from "@remix-run/react";
+import useWindowDimensions from "~/hooks/useWindowDimensions";
+
+export const Sidebar = () => {
+const isLarge = useIsLarge();
+
+let size: any;
+if( typeof window !== "undefined"){
+  size = useWindowDimensions();
+}
 
 const sidebar = {
-  open: (height = 500) => ({
-    clipPath: `circle(${height}px at 10px 10px)`,
+  open: () => ({
+    clipPath: `circle(${size?.innerHeight - (size?.innerHeight/3)}px at 10px 10px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -13,7 +23,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: "circle(30px at 1140px 45px)",
+    clipPath: `circle(30px at ${size?.innerWidth - 140}px 45px)`,
     transition: {
       delay: 0.5,
       type: "spring",
@@ -22,8 +32,6 @@ const sidebar = {
     }
   }
 };
-
-export const Sidebar = () => {
   const containerRef = useRef(null);
   const isOpen = useOutletContext<any>();
   return (

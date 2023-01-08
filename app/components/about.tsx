@@ -44,7 +44,7 @@ export default function About(){
                 <div>
                     <AnimatePresence mode="wait">
                         <motion.div
-                            className="bg-white w-full h-[300px]"
+                            className="bg-white w-full h-[300px] xl:h-[500px]"
                             key={selectedTab ? selectedTab.label : "empty"}
                             initial={{ y: 10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}

@@ -9,7 +9,7 @@ type Props = {
 
 export default function Projects({selectedId, setSelectedId}: Props){
     return (
-        <div className="mt-12 overflow-x-hidden w-screen">
+        <div className="mt-12 xl:mt-36 overflow-x-hidden w-screen">
             <div className="flex justify-start">
                 <motion.h2 
                     whileHover={{ scale: 1.1 }}
@@ -20,7 +20,7 @@ export default function Projects({selectedId, setSelectedId}: Props){
                     Projects
                 </motion.h2>
             </div>
-            <div className="pb-20 lg:ml-20 lg:grid flex flex-col justify-center md:grid-cols-2">
+            <div className="pb-20 lg:grid flex flex-col justify-center justify-items-center md:grid-cols-2">
                 {projects.map(elem => { 
                     return(
                         <ProjectCard key={elem.id} id={elem.id} title={elem.title} description={elem.description} color={elem.background} image={elem.image} selectedId={selectedId} setSelectedId={setSelectedId}/>
@@ -32,7 +32,7 @@ export default function Projects({selectedId, setSelectedId}: Props){
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ ease: "easeOut", duration: 2 }} 
-                    className="font-monoton text-lg animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 px-8 py-2 rounded-lg tracking-widest"
+                    className="font-monoton text-lg animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 px-8 py-2 xl:px-16 xl:py-6 rounded-lg tracking-widest"
                     ><p className="text-white">See More Projects</p>
                 </motion.button>
             </div>

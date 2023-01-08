@@ -14,12 +14,12 @@ export default function ProjectCard({id, title, description, selectedId, setSele
     return(
         <div className="overflow-hidden flex justify-center lg:block">
             <motion.div 
-                className="w-96 lg:w-auto lg:max-w-sm lg:ml-16 mt-36 min-h-max"
+                className="w-96 lg:w-auto lg:max-w-sm xl:max-w-4xl xl:w-[500px] lg:ml-16 h-full mt-36"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ ease: "easeOut", duration: 1.5 }}
             >
-                <div className={`animate-text rounded-t-2xl bg-gradient-to-r ${color} flex justify-center py-10`}>
+                <div className={`animate-text rounded-t-2xl bg-gradient-to-r ${color} flex justify-center py-10 xl:py-20`}>
                     <img 
                         src={image} 
                         alt="" 

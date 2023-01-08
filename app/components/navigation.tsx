@@ -14,7 +14,7 @@ const variants = {
 export const Navigation = () => (
   <motion.ul 
      variants={variants}
-     className="absolute p-10 w-72 flex flex-col space-y-12"
+     className="absolute p-10 w-72 flex flex-col space-y-12 xl:space-y-24"
   >
     {items.map(i => (
       // eslint-disable-next-line react/jsx-key

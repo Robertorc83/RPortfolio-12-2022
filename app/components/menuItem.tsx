@@ -30,7 +30,7 @@ export const MenuItem = ({id, title, url}:MenuItm) => {
       key={id}
       className={`relative z-30 ${  toggleOpen[0] === true ? "" : "pointer-events-none"}`}
     >
-      <Link to={url} onClick={toggleOpen[1]} className="font-monoton text-2xl ml-10 text-white">{title}</Link>
+      <Link to={url} onClick={toggleOpen[1]} className="font-monoton text-2xl xl:text-[30px] ml-10 text-white">{title}</Link>
     </motion.li>
   );
 };

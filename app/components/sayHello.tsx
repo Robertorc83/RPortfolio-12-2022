@@ -30,7 +30,7 @@ export default function Contact(){
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ ease: "easeOut", duration: 2 }} 
-                        className="font-monoton text-2xl animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 px-8 py-2 rounded-lg tracking-widest"
+                        className="font-monoton text-2xl animate-text bg-gradient-to-r xl:px-16 xl:py-6 from-amber-200 via-red-400 to-orange-400 px-8 py-2 rounded-lg tracking-widest"
                         ><Link to="/contact" className="text-white">Say Hello</Link>
                     </motion.button>
                 </div>

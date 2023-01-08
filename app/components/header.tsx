@@ -22,7 +22,7 @@ export default function Header() {
             <motion.div 
                 className="ml-10 text-lg h-8 md:h-8 flex justify-end pr-16 relative z-40"
                 whileTap={{ scale: 0.9 }}
-                animate={isMedium ? { x:-50 } : { x:-20}}
+                animate={{ x:-50 }}
                 transition={{ ease: "easeOut", duration: 2 }}
             >
                 <Hamburger onToggle={toggleOpen[1]} size={28} color="#fff" easing="ease-in" rounded />
