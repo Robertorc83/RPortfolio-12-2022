@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export default function ContactForm() {
   return (
     <div className="mt-36 pb-20">
-        <div className="justify-center mt-10 grid lg:grid-cols-3">   
-            <div className="col-span-2 px-10 md:px-28 lg:px-0">
+        <div className="justify-center mt-10 grid lg:grid-cols-3 ">   
+            <div className="col-span-2 px-10 md:px-28 lg:px-0 ">
                 <img src="/WorldMind.jpeg" alt="" className="h-full w-full rounded-2xl lg:rounded-none lg:rounded-r-2xl "/>
             </div>
             <div className="mt-16 flex w-screen lg:w-auto justify-center lg:block lg:mt-0 lg:px-10">
