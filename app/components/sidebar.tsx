@@ -15,7 +15,7 @@ if( typeof window !== "undefined"){
 
 const sidebar = {
   open: () => ({
-    clipPath: `circle(${size?.innerHeight - (size?.innerHeight/3)}px at 10px 10px)`,
+    clipPath: `circle(${size?.innerHeight - (size?.innerHeight/6)}px at 10px 10px)`,
     transition: {
       type: "spring",
       stiffness: 20,
