@@ -1,4 +1,4 @@
-import type MenuItm from "~/types/menuItem";
+import type {MenuItm} from "~/types/types";
 
 const items : MenuItm[] = [
   {

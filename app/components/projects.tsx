@@ -8,6 +8,10 @@ type Props = {
 }
 
 export default function Projects({selectedId, setSelectedId}: Props){
+    const onSetClick = (id:string) =>{
+        console.log("id", id)
+        setSelectedId(id)
+    }
     return (
         <div className="mt-12 xl:mt-36 overflow-x-hidden w-screen">
             <div className="flex justify-start">
@@ -21,11 +25,11 @@ export default function Projects({selectedId, setSelectedId}: Props){
                 </motion.h2>
             </div>
             <div className="pb-20 lg:grid flex flex-col justify-center justify-items-center md:grid-cols-2">
-                {projects.map(elem => { 
-                    return(
-                        <ProjectCard key={elem.id} id={elem.id} title={elem.title} description={elem.description} color={elem.background} image={elem.image} selectedId={selectedId} setSelectedId={setSelectedId}/>
+                { projects.map(( elem ) => (
+                        <ProjectCard key={elem.id} id={elem.id} title={elem.title} techStack={elem.techStack} color={elem.background} image={elem.image} selectedId={selectedId} setSelectedId={onSetClick} portrait={elem.portrait} solution={elem.solution}/>
                     )
-                })}
+                )}
+                
             </div>
             <div className="flex justify-center mt-12">
                 <motion.button

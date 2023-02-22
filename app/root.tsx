@@ -7,6 +7,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "@remix-run/react";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
@@ -56,22 +57,22 @@ export default function App() {
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </head>
-      <body className="h-full w-screen cursor-none overflow-x-hidden relative">
-        <div className=" bg-gradient-to-r from-gray-900 to-gray-600 min-h-screen bg-cover mt-0 pt-5 relative" >
-          <Outlet context={[isOpen, toggleOpen]} />
-          <div
-            className=" hidden lg:block z-30 animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
-            style={{
-                transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
-            }}
-          >
+      <body className="h-full w-screen cursor-none overflow-x-hidden relative">  
+          <div className=" bg-gradient-to-r from-gray-900 to-gray-600 min-h-screen bg-cover mt-0 pt-5 relative" >
+            <Outlet context={[isOpen, toggleOpen]} />
+            <div
+              className=" hidden lg:block z-30 animate-text bg-gradient-to-r from-stone-50 via-zinc-500 to-slate-800 fixed left-0 top-0 w-12 h-12 rounded-full pointer-events-none"
+              style={{
+                  transform: `translate3d(${cursorXY.x}px, ${cursorXY.y}px, 0)`,
+              }}
+            >
+            </div>
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+            <Footer />
           </div>
-          <ScrollRestoration />
-          <Scripts />
-          <LiveReload />
-          <Footer />
-        </div>
-      </body>
+        </body>
     </html>
   );
 }

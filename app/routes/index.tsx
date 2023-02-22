@@ -6,11 +6,12 @@ import SayHello from "~/components/sayHello";
 import Projects from "@components/projects";
 import { Sidebar } from "~/components/sidebar";
 import Description from "~/components/description";
+import { motion } from "framer-motion";
 
 export default function Index() {
   const [selectedId, setSelectedId] = useState<any>(null)
   return (
-    <div>
+    <motion.div exit={{ opacity: 0 }}>
       <div className={` ${selectedId ? "blur-sm" : "" }`}>
         <Header/>
         <Sidebar />
@@ -20,6 +21,6 @@ export default function Index() {
         <Projects selectedId={selectedId} setSelectedId={setSelectedId}/>
         <About/>
         <SayHello />
-    </div>
+    </motion.div>
   );
 }

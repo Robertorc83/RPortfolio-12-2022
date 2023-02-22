@@ -18,7 +18,7 @@ export const Navigation = () => (
   >
     {items.map(i => (
       // eslint-disable-next-line react/jsx-key
-      <MenuItem id={i.id} title={i.title} url={i.url}/>
+      <MenuItem key={i.id} id={i.id} title={i.title} url={i.url}/>
     ))}
   </motion.ul>
 );

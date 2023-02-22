@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import type { MenuItm } from "../types/types";
 import { Link, useOutletContext } from "@remix-run/react";
-import type MenuItm from "../types/menuItem";
 
 const variants = {
   open: {

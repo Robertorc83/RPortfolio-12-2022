@@ -22,7 +22,7 @@ export default function getMediaQuery(){
             },    
         }
     }
-    console.log("motionOptions", motionOptions)
+    
     return motionOptions
 
 }
