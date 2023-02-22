@@ -1,4 +1,4 @@
-app = "RoPortfolio-70be"
+app = "roportfolio-70be"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = [ ]

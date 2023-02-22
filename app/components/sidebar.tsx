@@ -1,17 +1,12 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Navigation } from "./navigation";
-import { useIsLarge } from "~/hooks/useMediaQuery";
 import { useOutletContext } from "@remix-run/react";
 import useWindowDimensions from "~/hooks/useWindowDimensions";
 
 export const Sidebar = () => {
-const isLarge = useIsLarge();
 
-let size: any;
-if( typeof window !== "undefined"){
-  size = useWindowDimensions();
-}
+let size = useWindowDimensions();
 
 const sidebar = {
   open: () => ({
