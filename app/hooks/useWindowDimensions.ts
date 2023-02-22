@@ -4,12 +4,14 @@ export default function useWindowDimensions() {
     
     const [windowSize, setWindowSize] = useState(getWindowSize());
     function getWindowSize() {
-        const {innerWidth, innerHeight} = window;
-        return {innerWidth, innerHeight};
-      }
+      if(typeof window !== "undefined"){
+          const {innerWidth, innerHeight} = window;
+          return {innerWidth, innerHeight};
+        }
+    }
 
       useEffect(() => {
-        if(window){
+        if(typeof window !== "undefined"){
           function handleWindowResize() {
             setWindowSize(getWindowSize());
           }

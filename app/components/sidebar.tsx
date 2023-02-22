@@ -10,7 +10,7 @@ let size = useWindowDimensions();
 
 const sidebar = {
   open: () => ({
-    clipPath: `circle(${size?.innerHeight - (size?.innerHeight/6)}px at 10px 10px)`,
+    clipPath: `circle(${ size && size?.innerHeight - (size?.innerHeight/6)}px at 10px 10px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -18,7 +18,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: `circle(30px at ${size?.innerWidth - 140}px 45px)`,
+    clipPath: `circle(30px at ${size && size?.innerWidth - 140}px 45px)`,
     transition: {
       delay: 0.5,
       type: "spring",
