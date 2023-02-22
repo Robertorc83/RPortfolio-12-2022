@@ -7,16 +7,19 @@ export default function useWindowDimensions() {
         const {innerWidth, innerHeight} = window;
         return {innerWidth, innerHeight};
       }
+
       useEffect(() => {
-        function handleWindowResize() {
-          setWindowSize(getWindowSize());
-        }
-    
-        window.addEventListener('resize', handleWindowResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleWindowResize);
-        };
+        if(window){
+          function handleWindowResize() {
+            setWindowSize(getWindowSize());
+          }
+      
+          window.addEventListener('resize', handleWindowResize);
+      
+          return () => {
+            window.removeEventListener('resize', handleWindowResize);
+          };
+        } 
       }, []);
     return windowSize;
 }
