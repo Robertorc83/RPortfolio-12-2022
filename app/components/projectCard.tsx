@@ -47,7 +47,7 @@ export default function ProjectCard({id, title, techStack, solution, selectedId,
                 { selectedId && (
                     <motion.div 
                     layoutId={selectedId} 
-                    className={` z-20 ${ selectedId === id ? "bg-white pointer-events-auto fixed rounded-md max-w-3xl top-10 left-0 right-0 shadow-xl w-3/4 md:w-2/5 mx-auto h-48 overflow-y-scroll" : "hidden"}  `}
+                    className={` z-20 ${ selectedId === id ? "bg-white pointer-events-auto fixed rounded-md max-w-3xl top-10 left-0 right-0 shadow-xl w-3/4 md:w-2/5 mx-auto h-48 overflow-y-scroll md:overflow-y-auto" : "hidden"}  `}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
