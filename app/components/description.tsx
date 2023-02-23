@@ -22,7 +22,7 @@ export default function Description(){
             whileTap={{ scale: 0.9 }}
             transition={{ ease: "easeOut", duration: 1.5 }}
             className="w-full mt-20 lg:mt-0 lg:w-[550px] h-72 flex justify-center lg:absolute right-10 ">
-              <img src="/codeEditor3d.png" alt="" className="w-96 xl:w-[1000px] xl:h-[500px]"/>
+              <img src="/codeEditor3d.png" alt="" className="w-80 md:w-96 xl:w-[1000px] xl:h-[500px]"/>
           </motion.div>
         </div>
     )

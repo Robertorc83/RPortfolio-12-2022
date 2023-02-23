@@ -1,16 +1,17 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Navigation } from "./navigation";
+import { useIsSmall } from "~/hooks/useMediaQuery";
 import { useOutletContext } from "@remix-run/react";
 import useWindowDimensions from "~/hooks/useWindowDimensions";
 
 export const Sidebar = () => {
 
 let size = useWindowDimensions();
-
+const isSmall = useIsSmall();
 const sidebar = {
   open: () => ({
-    clipPath: `circle(${ size && size?.innerHeight - (size?.innerHeight/6)}px at 10px 10px)`,
+    clipPath: `circle(${ size && size?.innerHeight - (size?.innerHeight/4)}px at 10px 10px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -18,11 +19,11 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: `circle(30px at ${size && size?.innerWidth - 140}px 45px)`,
+    clipPath: `circle(30px at ${size && size?.innerWidth - 90}px 45px)`,
     transition: {
       delay: 0.5,
       type: "spring",
-      stiffness: 400,
+      stiffness: 300,
       damping: 40
     }
   }

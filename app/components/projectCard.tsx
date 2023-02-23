@@ -17,7 +17,7 @@ export default function ProjectCard({id, title, techStack, solution, selectedId,
     return(
         <div className={` ${selectedId === id ? "z-10" : "z-1"} overflow-hidden flex justify-center lg:relative pointer-events-auto`}>
             <motion.div 
-                className="w-[400px] max-w-2xl xl:max-w-4xl xl:w-[500px] lg:ml-16 h-full mt-36 cursor-pointer"
+                className=" w-[300px] md:w-[400px] max-w-2xl xl:max-w-4xl xl:w-[500px] lg:ml-16 h-full mt-36 cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ ease: "easeOut", duration: 1.5 }}
