@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 export default function ContactForm() {
   return (
     <div className="mt-36 pb-20">
-        <div className="justify-center mt-10 grid lg:grid-cols-3 ">   
-            <div className="col-span-2 px-10 md:px-28 lg:px-0 ">
+        <div className="lg:justify-items-center mt-10 lg:grid lg:grid-cols-3 ">   
+            <div className="col-span-2 md:px-28 lg:px-0 flex justify-center">
                 <img src="/WorldMind.jpeg" alt="" className="h-full w-full rounded-2xl lg:rounded-none lg:rounded-r-2xl "/>
             </div>
-            <div className="mt-16 flex w-screen lg:w-auto justify-center lg:block lg:mt-0 lg:px-10">
+            <div className="mt-16 w-full lg:w-auto block px-5 md:px-0 lg:mt-0">
                 <form className="xl:space-y-5">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col w-full">
                         <label htmlFor="email" className="text-white text-xl xl:text-2xl font-monoton ">E-mail</label>
                         <input type="text" name="email" className="mt-5 h-10 xl:h-14 rounded-lg px-4 text-gray-600 placeholder-gray-600 w-full py-2.5 text-base transition duration-500 ease-in-out transform border-transparent bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"/>
                     </div>

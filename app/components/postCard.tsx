@@ -17,7 +17,7 @@ export default function PostCard({title, excerpt, slug, categories, featuredImag
             </div>
             <div className="grid grid-cols-1 justify-items-center w-full items-center mt-5 text-center ">
                 <h3 className="animate-text w-[300px] md:w-[600px] mt-5 bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 bg-clip-text text-transparent font-bold font-monoton lg:leading-snug tracking-widest xl:text-[28px]">{title}</h3>
-                <div className="animate-text bg-gradient-to-r from-slate-600 via-stone-700 to-slate-800 px-5 w-96 md:w-[600px] xl:w-[900px] md:px-10 mt-5 rounded-lg xl:text-xl ">
+                <div className="animate-text bg-gradient-to-r from-slate-600 via-stone-700 to-slate-800 px-5 w-[300px] md:w-[600px] xl:w-[900px] md:px-10 mt-5 rounded-lg xl:text-xl ">
                     <p className="text-white font-bal my-10 xl:my-16">{excerpt}</p>
                 </div>
                 <div className="mt-8">

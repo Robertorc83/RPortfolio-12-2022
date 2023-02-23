@@ -19,6 +19,7 @@ export const GetPostsQuery = gql`
 export const GetPostBySlug = gql`
   query PostIdQuery($slug: String!) {
     post(where: { slug: $slug }) {
+        title
         featuredImage {
             url
         }

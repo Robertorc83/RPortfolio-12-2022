@@ -31,18 +31,18 @@ export default function Post () {
         <motion.div exit={{ opacity: 0 }}>
             <Header/>
             <Sidebar/>
-            <div className="pb-20 mt-16 ">
-                <h1 className="text-center animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 bg-clip-text text-transparent text-[60px] font-monoton tracking-widest">{post.title}</h1>
-                <div className="px-64 mt-10 xl:px-96">
+            <div className="pb-20 mt-16">
+                <h1 className="text-center animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 bg-clip-text text-transparent text-[40px] px-5 lg:text-[60px] font-monoton tracking-widest">{post.title}</h1>
+                <div className="lg:px-64 mt-10 xl:px-96">
                         <img src={`${post.featuredImage.url}`} alt="" className="rounded-lg" />
                     </div> 
-                <div className="grid lg:grid-cols-5 ">
-                    <div className="col-span-4 mt-10 px-20 xl:px-36">
+                <div className="lg:grid lg:grid-cols-5 justify-items-center w-full">
+                    <div className="col-span-4 mt-10 mx-10 lg:mx-0 lg:px-20 xl:px-36">
                         <RichText
                             content={post.content.raw}
                             renderers={{
                             h3: ({ children }) => <h3 className="animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 mt-10 bg-clip-text text-transparent text-2xl xl:text-[30px] font-monoton tracking-widest">{children}</h3>,
-                            p: ({ children }) => <p className="text-white mt-5 font-abril xl:text-xl">{children}</p>,
+                            p: ({ children }) => <p className="text-white mt-5 font-abril lg:px-0 xl:text-xl">{children}</p>,
                             code_block: ({ children }) => {
                                 return React.isValidElement(children) ? <div className="mt-10 pb-5 font-abril">
                                     <CopyBlock
@@ -56,7 +56,7 @@ export default function Post () {
                             }}}
                         />
                     </div>
-                    <div className="mt-16 px-36 lg:px-0">
+                    <div className="mt-16 flex justify-center lg:px-0 w-full ">
                         <PostSidebar/>
                     </div>
                 </div>

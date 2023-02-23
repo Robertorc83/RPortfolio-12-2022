@@ -14,7 +14,7 @@ export default function Main(){
               <motion.h2 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                animate={isLarge ? { x: 100 } : { x:10 }}
+                animate={isLarge ? { x: 100 } : { x:0 }}
                 transition={{ ease: "easeOut", duration: 2 }}
                 className="w-[85%] md:w-5/6 ml-8 px-10 md:px-0 md:ml-16 lg:ml-24 lg:w-auto mt-10 xl:mt-24 animate-text bg-gradient-to-r from-amber-200 via-red-400 to-orange-400 bg-clip-text text-transparent text-[35px] md:text-[60px] xl:text-[80px] font-bold font-bal h-[380px] lg:h-[350px] leading-snug text-center md:text-start">
                   I love creating awesome digital experiences and innovative products
