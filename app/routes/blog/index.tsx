@@ -1,6 +1,6 @@
 import { json } from "@remix-run/node";
 import { motion } from "framer-motion";
-import { IsPost } from "~/types/types";
+import type { IsPost } from "~/types/types";
 import Header from "~/components/header";
 import PostCard from "~/components/postCard";
 import { Sidebar } from "~/components/sidebar";
